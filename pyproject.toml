@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "py-template"
+version = "0.1.0"
+description = "Template for my Python projects"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "py_template"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
