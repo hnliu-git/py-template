@@ -5,7 +5,7 @@ install:
 		poetry install
 
 test: install
-		poetry run pytest tests
+		poetry run pytest tests --cov
 
 analysis: install
 		poetry run flake8 $(MODULE_FOLDER)
