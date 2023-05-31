@@ -1,5 +1,13 @@
+pyversion := 3.10
+pip := pip$(pyversion)
+python := python$(pyversion)
+
 MODULE_FOLDER := py_template
 
+init: pyproject.toml
+	$(pip) install --upgrade pip
+	command -v poetry || $(pip) install poetry
+	poetry env use $(python)
 
 install:
 		poetry install
