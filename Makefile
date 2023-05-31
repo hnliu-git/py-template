@@ -9,7 +9,7 @@ init: pyproject.toml
 	command -v poetry || $(pip) install poetry
 	poetry env use $(python)
 
-install:
+install: init
 		poetry install
 
 test: install
